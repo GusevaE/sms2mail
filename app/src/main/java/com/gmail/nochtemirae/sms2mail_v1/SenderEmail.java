@@ -32,7 +32,7 @@ public class SenderEmail extends Activity {
                     SenderMailAsync senderMailAsync = new SenderMailAsync();
                     senderMailAsync.execute();
                 } else
-                    Toast.makeText(context, "email!!!", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(context, getString(R.string.se_wrong_email), Toast.LENGTH_SHORT).show();
             }
         });
     }
@@ -43,13 +43,13 @@ public class SenderEmail extends Activity {
         @Override
         protected void onPreExecute() {
             WaitingDialog = ProgressDialog.show
-                    (SenderEmail.this, "Отправка данных", "Отправляем сообщение...", true);
+                    (SenderEmail.this, getString(R.string.se_sending), getString(R.string.se_send_mail), true);
         }
 
         @Override
         protected void onPostExecute(Boolean result) {
             WaitingDialog.dismiss();
-            Toast.makeText(context, "Отправка завершена", Toast.LENGTH_LONG).show();
+            Toast.makeText(context, getString(R.string.se_ending), Toast.LENGTH_LONG).show();
             ((Activity) context).finish();
         }
 
@@ -65,7 +65,7 @@ public class SenderEmail extends Activity {
                 MailSenderClass sender = new MailSenderClass(from, password, smtp);
                 sender.sendMail(title, text, from, where);
             } catch (Exception e) {
-                Toast.makeText(context, "Ошибка отправки сообщения!",
+                Toast.makeText(context, getString(R.string.se_error),
                         Toast.LENGTH_SHORT).show();
             }
             return false;

@@ -31,6 +31,7 @@ public class ContactsFragment extends Fragment {
                              Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_contacts,
                 container, false);
+        getContList(view);
         Button button = ((Button) view.findViewById(R.id.fc_button));
         button.setOnClickListener(new View.OnClickListener() {
             @SuppressLint("WrongViewCast")
@@ -44,7 +45,6 @@ public class ContactsFragment extends Fragment {
                 startActivity(senderClass);
             }
         });
-        getContList(view);
         return view;
     }
 

@@ -9,5 +9,10 @@
     <string name="fc_title">Контакты на телефоне:</string>
     <string name="fs_title">SMS на телефоне:</string>
     <string name="se_email_hint">Введите E-mail:</string>
+    <string name="se_wrong_email">Введите существующий e-mail</string>
+    <string name="se_sending">Отправка данных</string>
+    <string name="se_send_mail">Отправка сообщения…</string>
+    <string name="se_ending">Сообщение отправлено</string>
+    <string name="se_error">Ошибка отправки сообщения</string>
 
 </resources>
