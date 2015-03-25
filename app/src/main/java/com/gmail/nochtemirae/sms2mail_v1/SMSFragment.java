@@ -40,7 +40,7 @@ public class SMSFragment extends Fragment {
 
     private void getSMSList(View v) {
         EditText edtText = (EditText) v.findViewById(R.id.fs_list);
-        Uri uriSms = Uri.parse("content://sms/");
+        Uri uriSms = Uri.parse("content://sms/inbox");
         SMSFragment context = this;
         Cursor cur = context.getActivity().getContentResolver().query(uriSms, null, null, null, null);
         SimpleDateFormat sdfrmt = new SimpleDateFormat("HH:mm:ss dd.MM.yyyy");
