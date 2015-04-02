@@ -51,6 +51,5 @@ public class SMSFragment extends Fragment {
             }
         }
     }
-
 }
 

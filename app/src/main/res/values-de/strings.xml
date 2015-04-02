@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SMS2Mail</string>
+    <string name="action_settings">Einstellungen</string>
+    <string name="ma_one">SMS</string>
+    <string name="ma_two">Kontakte</string>
+    <string name="button">Senden</string>
+    <string name="fc_title">Kontakte auf diesem Telefon:</string>
+    <string name="fs_title">SMS auf diesem Telefon:</string>
+    <string name="se_email_hint">Geben Sie Ihre E-mail-Adresse ein:</string>
+    <string name="se_wrong_email">Geben Sie eine gültige E-Mail ein</string>
+    <string name="se_sending">Senden von Daten</string>
+    <string name="se_send_mail">Senden der Nachricht</string>
+    <string name="se_ending">Die Nachricht gesandt</string>
+    <string name="se_error">E-Mail wird nicht gesandt</string>
+    <string name="se_not_connection">Internet ist nicht verfügbar</string>
+
+</resources>

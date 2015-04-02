@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.pm.ActivityInfo;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.view.View;
@@ -27,15 +29,26 @@ public class SenderEmail extends Activity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+
                 EditText email = (EditText) findViewById(R.id.se_email);
-                if (android.util.Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()) {
+                if (!android.util.Patterns.EMAIL_ADDRESS.matcher(email.getText().toString()).matches()) {
+                    Toast.makeText(context, getString(R.string.se_wrong_email), Toast.LENGTH_SHORT).show();
+                } else if (!checkInternet())
+                    Toast.makeText(context, getString(R.string.se_not_connection), Toast.LENGTH_SHORT).show();
+                else {
                     SenderMailAsync senderMailAsync = new SenderMailAsync();
                     senderMailAsync.execute();
-                } else
-                    Toast.makeText(context, getString(R.string.se_wrong_email), Toast.LENGTH_SHORT).show();
+                }
             }
         });
     }
+
+    public boolean checkInternet() {
+        ConnectivityManager cm =
+                (ConnectivityManager) getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo netInfo = cm.getActiveNetworkInfo();
+        return netInfo != null && netInfo.isConnectedOrConnecting();
+        }
 
     private class SenderMailAsync extends AsyncTask<Object, String, Boolean> {
         ProgressDialog WaitingDialog;

@@ -12,4 +12,6 @@
     android:headerDividersEnabled="false"
     android:choiceMode="singleChoice"
 
-    xmlns:android="http://schemas.android.com/apk/res/android"></ListView>
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+</ListView>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SMS2Mail</string>
+    <string name="action_settings">Settings</string>
+    <string name="ma_one">SMS</string>
+    <string name="ma_two">Контакты</string>
+    <string name="button">Отправить</string>
+    <string name="fc_title">Контакты на телефоне:</string>
+    <string name="fs_title">SMS на телефоне:</string>
+    <string name="se_email_hint">Введите E-mail:</string>
+    <string name="se_wrong_email">Введите существующий e-mail</string>
+    <string name="se_sending">Отправка данных</string>
+    <string name="se_send_mail">Отправка сообщения…</string>
+    <string name="se_ending">Сообщение отправлено</string>
+    <string name="se_error">Ошибка отправки сообщения</string>
+    <string name="se_not_connection">Нет доступа к интернету</string>
+
+</resources>
